@@ -1,0 +1,73 @@
+.nav {
+  padding: 2rem 0;
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--light-blue);
+  margin-right: 3rem;
+}
+
+.nav__primary-section{ 
+  display: flex;
+}
+
+.nav__secondary-section{
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  color: var(--blue-navy);
+  margin-top: 0.5rem;
+}
+
+.nav__list--item a{
+  font-size: 1.8rem;
+  margin-right:2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--blue-navy);
+}
+
+.nav__icon {
+  height: 3.6rem;
+  margin-right: 1rem;
+}
+
+.nav__btn-contact {
+  padding: 1.2rem 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+.btn--light {
+  background-color: var(--light-blue);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn--light:hover{
+  background-color: var(--green);
+}
+
+@media (max-width: 768px) {
+
+
+}
+
+.nav__menu--icon{
+  font-size: 4.2rem;
+  color: var(--blue-navy);
+}
