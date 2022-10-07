@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body{
   padding: 0 8rem;
+  position: relative;
 }
 
 @media (max-width: 768px) {

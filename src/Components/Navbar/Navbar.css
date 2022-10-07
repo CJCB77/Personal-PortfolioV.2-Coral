@@ -1,12 +1,13 @@
 .nav {
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   display:flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: flex-end;
 }
 
 .logo {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   font-weight: 900;
   color: var(--light-blue);
   margin-right: 3rem;
@@ -18,7 +19,7 @@
 
 .nav__secondary-section{
   display: flex;
-  align-items: center;
+  align-items:flex-end;
 }
 
 .nav__list {
@@ -26,24 +27,54 @@
   list-style: none;
   align-items: center;
   color: var(--blue-navy);
+  margin-left: 0.5rem;
   margin-top: 0.5rem;
+
+}
+
+.nav__list--item {
+  margin-right: 2rem;
 }
 
 .nav__list--item a{
   font-size: 1.8rem;
-  margin-right:2rem;
   font-weight: 700;
   text-decoration: none;
   color: var(--blue-navy);
+  font-family: 'Roboto Slab', serif;
+
+}
+
+.nav__list--item a::after{
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0.3rem;
+  width: 0%;
+  background: var(--light-blue);
+  transition: width 0.3s;
+  transition: all 0.4s ease;
+
+}
+
+.nav__list--item a:hover::after{
+  visibility: visible;
+  width: 100%;
 }
 
 .nav__icon {
   height: 3.6rem;
-  margin-right: 1rem;
+  margin-right: 1.2rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+/*Move up on hover*/
+.nav__icon:hover{
+  transform: translateY(-5px) scale(1.2);
 }
 
 .nav__btn-contact {
-  padding: 1.2rem 2.5rem;
+  padding: 1rem 2.5rem;
   border-radius: 0.5rem;
   font-size: 1.8rem;
   font-weight: 700;
@@ -55,19 +86,32 @@
   color: var(--white);
   border: none;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 1s;
 }
 
 .btn--light:hover{
-  background-color: var(--green);
+  background-color: var(--bright-green);
 }
 
+/* Mobile styles */
 @media (max-width: 768px) {
-
+  .logo{
+    font-size: 3.6rem;
+  }
+  
+  .hamburguer-wrap{
+    position: fixed;
+    top: 1.5rem;
+    right: 3rem;
+    z-index: 1;
+    
+  }
+  
+  .hamburguer{
+    color: var(--blue-navy);
+    font-size: 5rem;
+  }
 
 }
 
-.nav__menu--icon{
-  font-size: 4.2rem;
-  color: var(--blue-navy);
-}
+
