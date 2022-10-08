@@ -27,6 +27,7 @@
   color: var(--light-blue);
   width: 30%;
   margin-top: 1rem;
+  overflow: hidden;
 }
 
 .mobile-menu__list{
@@ -47,6 +48,8 @@
   font-weight: 600;
   font-family: 'Roboto Slab', serif;
   text-decoration: none;
+  display: inline-block;
+  overflow: hidden;
 }
 
 .mobile-menu__list--item a:hover{
@@ -55,6 +58,11 @@
 
 .mobile-menu__socials{
   margin-top: 2rem;
+  display: flex;
+}
+
+.mobile-menu__socials a{
+  overflow-x: hidden;
 }
 
 .mobile-menu__icon{

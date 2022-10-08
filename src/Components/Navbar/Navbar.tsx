@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useSpring, animated, easings } from 'react-spring'
+import { useSpring, animated} from 'react-spring'
 //Components
 import MobileMenu from './MobileMenu'
 //Custom Hooks
