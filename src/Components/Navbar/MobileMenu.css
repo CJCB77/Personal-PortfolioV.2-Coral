@@ -57,7 +57,6 @@
 }
 
 .mobile-menu__socials{
-  margin-top: 2rem;
   display: flex;
 }
 
@@ -71,10 +70,28 @@
 
 .mobile-menu__btn{
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
   font-size: 2.8rem;
   font-family: 'Roboto Slab', serif;
   font-weight: 500;
   border-radius: 0.2rem;
+  overflow-x: hidden;
 }
+
+.mobile-menu__btn div {
+  white-space: nowrap;
+}
+
+.mobile-menu__btn div span{
+  font-weight: 600;
+  color:var(--blue-navy);
+  font-size: 2.8rem;
+  width: 100%;
+  display: inline-block;
+}
+
+.mobile-menu__btn div:last-child{
+  transform: translateX(2rem);
+}
+
 

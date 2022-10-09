@@ -1,5 +1,7 @@
 //React Spring animation
 import { useSpring, animated} from 'react-spring'
+//React hooks
+import { useState } from 'react'
 //Icons
 import LinkedinIcon from '../../assets/icons/linkedinMobile.svg'
 import GitHubIcon from '../../assets/icons/githubMobile.svg'
@@ -9,6 +11,7 @@ import { useRef } from 'react'
 //Animation Components
 import DownToTop from '../Animations/DownToTop'
 import LeftToRight from '../Animations/LeftToRight'
+import LoopRight from '../Animations/LoopRight'
 
 
 interface Props {
@@ -17,17 +20,7 @@ interface Props {
 
 function MobileMenu({openMenu}: Props): JSX.Element {
 
-  const counter = useRef(1)
-
-  //Animation for appearing link from left to right
-  const leftRight = useSpring({
-    //Make title appear
-    to: { transform: "translateX(0px)", opacity: 1 },
-    from: { transform: "translateX(-30px)", opacity: 0 },
-    config: { duration: 1000 },
-    reset: openMenu,
-    reverse:!openMenu
-  })
+  const[delay,setDelay] = useState<number>(0)
 
   return (
     <div className={openMenu ? 'mobile-menu-outer active' : 'mobile-menu-outer'}>
@@ -74,7 +67,12 @@ function MobileMenu({openMenu}: Props): JSX.Element {
           </a>
         </div>
 
-        <button className='mobile-menu__btn  btn--light'>Contact me</button>
+        <button className='mobile-menu__btn  btn--light'>
+          <LoopRight openMenu={openMenu} >
+            <span>Contact me</span>
+            <span>Contact me</span>
+          </LoopRight>
+        </button>
       </aside>
     </div>
     
