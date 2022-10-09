@@ -27,19 +27,34 @@
   color: var(--light-blue);
   width: 30%;
   margin-top: 1rem;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .mobile-menu__list{
   list-style: none;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 2rem 0;
-
 }
 
-.mobile-menu__list--item{
-  margin: 2.5rem 0;
+.mobile-menu__list::before{
+  content: '';
+  width: 0.3rem;
+  height:100%;
+  background-color: var(--light-blue);
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+}
+
+.mobile-menu__list--after{
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  justify-content: space-between;
+}
+
+.mobile-menu__list--item span{
+  font-size: 3.2rem;
 }
 
 .mobile-menu__list--item a{
