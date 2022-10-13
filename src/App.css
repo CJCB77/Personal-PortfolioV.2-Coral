@@ -16,7 +16,7 @@
   --pale-yellow:#FCF3DD;
   --green:#5CC7C0;
   --bright-green:#15CDC1;
-  --black:#4B5D67;
+  --black:#222222;
 }
 
 html {
@@ -38,4 +38,24 @@ body{
     padding: 0 3rem;
     position: relative;
   }
+}
+
+.text--yellow {
+  color: var(--mustard);
+}
+
+.text--green {
+  color: var(--bright-green);
+}
+
+.btn--light {
+  background-color: var(--light-blue);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.btn--light:hover{
+  background-color: var(--bright-green);
 }

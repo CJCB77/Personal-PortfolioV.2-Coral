@@ -1,0 +1,29 @@
+.hamburguer-wrap{
+  position: fixed;
+  top: 2.8rem;
+  right: 3rem;
+  z-index: 2;
+  
+}
+
+.hamburguer-inner{
+  width: 3.5rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.hamburguer-inner span{
+  display: block;
+  background: var(--blue-navy);
+  height: 0.3rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 0.3rem;
+}
+
+.hamburguer-inner span:nth-child(2){
+  top: 1.2rem;
+}
+
+
