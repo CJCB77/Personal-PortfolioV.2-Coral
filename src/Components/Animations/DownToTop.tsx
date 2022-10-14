@@ -10,9 +10,9 @@ interface Props {
 const DownToTop:React.FC<Props> = ({delay,openMenu,children,className}:Props) => {
   
   const styles = useSpring({
-    from: { transform: 'translateY(40px)'},
+    from: { transform: 'translateY(55px)'},
     to: { transform: 'translateY(0px)' },
-    config: { duration: 500 },
+    config: { duration: 300 },
     delay: delay,
     reset: openMenu != undefined? openMenu : false,
     reverse: openMenu != undefined? !openMenu : false

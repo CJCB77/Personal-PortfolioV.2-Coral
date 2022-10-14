@@ -1,0 +1,78 @@
+.programmer-img{
+  height: 60rem;
+  margin-top: -3rem;
+}
+
+.css-img{
+  position: absolute;
+  top: 35%;
+  left: -4%;
+  height: 12rem;
+}
+
+
+.python-img{
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  height: 12rem;
+}
+
+.js-img{
+  position: absolute;
+  top: 18%;
+  right: 20%;
+  height: 12rem;
+}
+
+.responsive-img{
+  position: absolute;
+  top: 45%;
+  right: -12%;
+  height: 14rem;
+}
+
+/*Mobile */
+@media (max-width: 768px) {
+  .programmer-img{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: relative;
+   }
+   
+  .hero__img{
+    margin:-4rem -2rem;
+    order: 2;
+  }
+
+  .hero__cta{
+    margin-top: -0.5rem;
+    order: 3;
+    justify-content: center;
+  }
+
+  .css-img{
+    height: 7rem;
+    top: 35%;
+    left: 0;
+  }
+
+  .python-img{
+    height: 8rem;
+    top: 15%;
+    left: 25%;
+  }
+
+  .js-img{
+    height: 8rem;
+    top: 20%;
+    right: 25%;
+  }
+
+  .responsive-img{
+    height: 7rem;
+    top: 50%;
+    right: 0;
+  }
+}

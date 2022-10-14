@@ -13,7 +13,7 @@ const FadeIn:React.FC<Props> = ({openMenu,children,duration,delay,className}:Pro
   const animationStyles = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
-    config: { duration: duration ? duration : 500 },
+    config: { duration: duration ? duration : 400 },
     reset: openMenu != undefined? openMenu : false,
     cancel: openMenu != undefined? !openMenu : false,
     reverse: openMenu != undefined? !openMenu : false,

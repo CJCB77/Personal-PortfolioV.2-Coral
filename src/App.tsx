@@ -1,6 +1,9 @@
+import React from 'react';
 //Components
 import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components/Hero/Hero';
+//Nomralize.css
+import './Normalize.css';
 //CSS
 import './App.css';
 

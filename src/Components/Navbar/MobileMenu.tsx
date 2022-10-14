@@ -48,14 +48,14 @@ function MobileMenu({openMenu}: Props): JSX.Element {
             </li>
             <li className='mobile-menu__list--item'>
               <a href="#">
-                  <DownToTop delay={800} openMenu={openMenu}>
+                  <DownToTop delay={900} openMenu={openMenu}>
                       <span>Skills</span>
                   </DownToTop>
                 </a>
             </li>
             <li className='mobile-menu__list--item'>
               <a href="#">
-                  <DownToTop delay={1000} openMenu={openMenu}>
+                  <DownToTop delay={1200} openMenu={openMenu}>
                       <span>Projects</span>
                   </DownToTop>
                 </a>
