@@ -34,20 +34,20 @@ const HeroImg = () => {
   return (
     <div className="hero__img">
         {/* Fade in the main image */}
-        <FadeIn delay={1200}>
+        <FadeIn delay={1000}>
           <img src={useIsMobile()? HeroImgMobile : Programmer} alt="Hero Image" className="programmer-img"/>
         </FadeIn>
         {/* The skills images floating in absolute position       */}
-        <FadeIn delay={1400}>
+        <FadeIn delay={1200}>
           <animated.img style={floatProps} src={Css} alt="css styling image" className="css-img" />
         </FadeIn>
-        <FadeIn delay={1800}>
+        <FadeIn delay={1600}>
           <animated.img style={floatPropsReverse} src={Python} alt="python file image" className="python-img" />
         </FadeIn>
-        <FadeIn delay={2000}>
+        <FadeIn delay={1800}>
           <animated.img style={floatProps} src={Javascript} alt="javascript file image" className="js-img" />
         </FadeIn>
-        <FadeIn delay={1600}>
+        <FadeIn delay={1400}>
           <animated.img style={floatPropsReverse} src={Responsive} alt="responsive design image" className="responsive-img" />
         </FadeIn>
       </div>

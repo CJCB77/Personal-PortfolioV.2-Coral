@@ -15,7 +15,7 @@ const Hero = () => {
       <HeroImg />
 
       {useIsMobile() && 
-      <FadeIn className="hero__cta" delay={2000}>
+      <FadeIn className="hero__cta" delay={1800}>
           <button className="hero__cta--btn btn--light">Lets Connect</button>
       </FadeIn>}
     </section>

@@ -46,7 +46,7 @@ const Heading = () => {
         </DownToTop> 
       </div>
     </h3>
-    {!useIsMobile() && <FadeIn className="hero__cta" delay={2400}>
+    {!useIsMobile() && <FadeIn className="hero__cta" delay={1800}>
       <button className="hero__cta--btn btn--light">Lets Connect</button>
     </FadeIn>}
   </div>
