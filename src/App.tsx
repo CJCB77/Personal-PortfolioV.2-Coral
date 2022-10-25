@@ -6,14 +6,17 @@ import About from './Components/About/About';
 import { Technologies } from './Components/Skills/Technologies';
 import { Projects } from './Components/Projects/Projects';
 import { ContactForm } from './Components/Contact/ContactForm';
+import { Footer } from './Components/Footer/Footer';
 //Nomralize.css
 import './Normalize.css';
 //CSS
 import './App.css';
-import { Footer } from './Components/Footer/Footer';
+import useIsMobile from './CustomHooks/useIsMobile';
 
 
 function App() {
+
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     window.addEventListener('scroll', () => {

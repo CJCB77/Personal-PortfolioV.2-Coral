@@ -28,7 +28,7 @@ export const Project = ({imgMobile,imgDesktop,title,description,stack}:ProjectPr
   const props = useSpring({
     opacity: entry?.isIntersecting ? 1 : 0,
     transform: entry?.isIntersecting ? 'translateY(0px)' : 'translateY(50px)',
-    config: {duration: 500}
+    config: {duration: 300}
   })
 
   return (

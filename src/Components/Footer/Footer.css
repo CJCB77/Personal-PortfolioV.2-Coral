@@ -45,7 +45,7 @@
 }
 
 .links__col li {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -53,8 +53,26 @@
 .links__col li a {
   color: var(--blue-navy);
   text-decoration: none;
+  display: inline-block;
 }
 
+.links__col li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  border-radius: 1rem;
+  background-color: var(--light-blue);
+  transition: width 0.3s;
+}
+
+.links__col li a:hover {
+  color: var(--active-blue);
+}
+
+.links__col li a:hover::after {
+  width: 100%;
+}
 
 .footer__copyright {
   margin-top: 6rem;

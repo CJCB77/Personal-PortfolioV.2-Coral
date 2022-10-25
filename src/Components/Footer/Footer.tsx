@@ -21,9 +21,15 @@ export const Footer = () => {
         <div className='footer__links'>
           <ul className='links__col'>
             <li className='links__col--title'>Links</li>
-            <li>Home</li>
-            <li>Skills</li>
-            <li>Projects</li>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Skills</a>
+            </li>
+            <li>
+              <a href="#">Projects</a>
+            </li>
           </ul>
           <ul className='links__col'>
             <li className='links__col--title'>Social</li>
