@@ -26,7 +26,7 @@ function App() {
       if(window.scrollY > 3500) {
         document.body.classList.add('bg--light-blue');
       }
-      if(window.scrollY > 5200) {
+      if(window.scrollY > 4500) {
         document.body.classList.remove('bg--light-blue');
       }
     })
