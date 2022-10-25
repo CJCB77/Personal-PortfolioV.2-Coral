@@ -1,0 +1,148 @@
+.footer {
+  background-color: var(--lighter-blue);
+  color: var(--blue-navy);
+  margin: 0 -8rem;
+  padding: 4rem 8rem;
+  padding-top: 10rem;
+}
+
+.footer__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.footer__logo img {
+  margin-bottom: 1.5rem;
+}
+
+.footer__logo h2 {
+  font-size: 3.2rem;
+  width: 60%;
+}
+
+.footer__links {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.links__col li:first-child {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.links__col {
+  list-style: none;
+}
+
+.links__col li {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.links__col li a {
+  color: var(--blue-navy);
+  text-decoration: none;
+}
+
+
+.footer__copyright {
+  margin-top: 6rem;
+}
+
+.footer__copyright hr {
+  background-color: var(--blue-navy);
+  height: 1px;
+  border: none;
+  margin: 1rem 0;
+}
+
+.footer__copyright span {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .footer {
+    margin: 0 -2rem;
+    padding: 2rem;
+    padding-top: 6rem;
+  }
+
+  .footer__main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+
+  .footer__logo {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .footer__logo img {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
+  .footer__logo h2 {
+    font-size: 2.4rem;
+    width: 30%;
+  }
+
+  .footer__links {
+    margin: 4rem 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+
+  .links__col li:first-child {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .links__col li {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .links__col li a {
+    color: var(--blue-navy);
+    text-decoration: none;
+  }
+
+  .footer__copyright {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 0;
+  }
+
+  .footer__copyright hr {
+    background-color: var(--blue-navy);
+    height: 1px;
+    border: none;
+  }
+
+  .footer__copyright span {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  
+}

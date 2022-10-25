@@ -10,6 +10,7 @@ import { ContactForm } from './Components/Contact/ContactForm';
 import './Normalize.css';
 //CSS
 import './App.css';
+import { Footer } from './Components/Footer/Footer';
 
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       console.log(window.scrollY);
+      if(window.scrollY < 650) {
+        document.body.classList.remove('bg--light-blue');
+      }
       if(window.scrollY > 650) {
         document.body.classList.add('bg--light-blue');
       }
@@ -40,6 +44,7 @@ function App() {
       <Technologies/>
       <Projects/>
       <ContactForm/>
+      <Footer />
     </div>
   );
 }

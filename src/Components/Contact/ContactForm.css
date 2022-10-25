@@ -131,6 +131,7 @@
   .contact{
     margin: 5rem 0;
     flex-direction: column;
+    margin-bottom: 0;
   }
 
   .contact__main {
