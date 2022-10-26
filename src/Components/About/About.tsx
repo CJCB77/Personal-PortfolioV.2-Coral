@@ -45,7 +45,7 @@ const About = () => {
 
   return (
     //About section
-    <section className='about'>
+    <section className='about' id="about">
       {/*If not on mobile show image first*/}
       {!useIsMobile() && <animated.div style={floatSpring} className='about__img'>
         <img src={Octopus} alt="image of an octopus multitasking" className='octopus-img' />

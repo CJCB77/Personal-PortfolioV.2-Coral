@@ -10,6 +10,7 @@ import LinkedinIcon from '../../assets/icons/linkedin.svg'
 import GitHubIcon from '../../assets/icons/github.svg'
 //CSS
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 
 function Navbar(): JSX.Element {
   //State for toggling the menu on mobile devices
@@ -29,22 +30,24 @@ function Navbar(): JSX.Element {
   }
 
   return (
-    <header>
+    <header id='home'>
       {/*If mobile viewport display hamburguer menu icon wich is fixed */}
       {useIsMobile() &&  <Hamburguer openMenu={openMenu} toggleMenu={toggleMenu}/>}
 
       <animated.nav style={springProps} className="nav"> 
             <div className='nav__primary-section'>
-              <h1 className='logo'>JC Dev</h1>
+              <h1 className='logo'>
+                <Link to='/'>JC Dev</Link>
+              </h1>
               {!useIsMobile() && <ul className='nav__list'>
                 <li className='nav__list--item'>
-                  <a href="#">About</a>
+                  <a href="#about">About</a>
                 </li>
                 <li className='nav__list--item'>
-                  <a href="#">Skills</a>
+                  <a href="#skills">Skills</a>
                 </li>
                 <li className='nav__list--item'>
-                  <a href="#">Projects</a>
+                  <a href="#projects">Projects</a>
                 </li>
               </ul>}
             </div>
@@ -59,12 +62,12 @@ function Navbar(): JSX.Element {
                 </a>
               </div>
 
-              <button className='nav__btn-contact  btn--light'>Contact me</button>        
+              <a href="#contact" className='nav__btn-contact  btn--light'>Contact me</a>        
             </div>
             } 
       </animated.nav>
       {/*If mobile viewport display mobile menu */}
-      {useIsMobile() && <MobileMenu openMenu={openMenu} />}
+      {useIsMobile() && <MobileMenu openMenu={openMenu} toggleMenu={toggleMenu} />}
     </header>
   )
 }

@@ -3,6 +3,7 @@ import React from 'react'
 import useIsMobile from '../../CustomHooks/useIsMobile'
 import {useSpring, animated} from 'react-spring'
 import {useInterventionObserver} from '../../CustomHooks/useInterventionObserver'
+import { Link } from 'react-router-dom';
 
 interface ProjectProps {
   title: string;
@@ -10,9 +11,10 @@ interface ProjectProps {
   imgMobile: string;
   imgDesktop: string;
   stack: string[];
+  path?: string;
 }
 
-export const Project = ({imgMobile,imgDesktop,title,description,stack}:ProjectProps) => {
+export const Project = ({imgMobile,imgDesktop,title,description,stack,path}:ProjectProps) => {
 
   const renderStack = stack.map((tech, index) => {
     return <img key={index} src={tech} alt={'stack used in project icon'} className="stack-icon" />
@@ -36,7 +38,9 @@ export const Project = ({imgMobile,imgDesktop,title,description,stack}:ProjectPr
           <div className='project__img'>
             <img src={useIsMobile() ? imgMobile : imgDesktop } alt="project image" />
             <div className='project__hover'>
-              <button>View More</button>
+              <button>
+                <Link to='/energy-meter-ocr' >View More</Link>
+              </button>
             </div>
           </div>
           <div className='project__info'>

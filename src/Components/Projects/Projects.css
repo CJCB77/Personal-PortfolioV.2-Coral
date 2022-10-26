@@ -91,6 +91,11 @@
   cursor: pointer;
 }
 
+.project__hover button a {
+  text-decoration: none;
+  color: var(--white);
+}
+
 .project__img:hover .project__hover{
   opacity: 1;
 }

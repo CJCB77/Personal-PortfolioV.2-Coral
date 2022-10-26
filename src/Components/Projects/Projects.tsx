@@ -32,7 +32,7 @@ import { Project } from './Project'
 export const Projects = () => {
 
   return (
-    <section className='projects'>
+    <section className='projects' id="projects">
       <SectionDivider section='Projects'/>
       <div className='projects__container'>
         <Project 
@@ -43,6 +43,7 @@ export const Projects = () => {
           imgMobile={projectWaterMeter}
           imgDesktop={projectWaterMeterDesktop}
           stack={[reactIcon, express, node, postgres, kotlin, aws]}
+          path='/energy-meter-ocr'
         />
 
         <Project 

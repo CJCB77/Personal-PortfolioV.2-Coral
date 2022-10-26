@@ -6,6 +6,8 @@ import useIsMobile from '../../CustomHooks/useIsMobile'
 //Images
 import gears from '../../assets/icons/logo-gears.svg'
 import gearsDesktop from '../../assets/icons/logo-gears-desktop.svg'
+import { Link } from 'react-router-dom'
+
 
 export const Footer = () => {
   
@@ -16,25 +18,27 @@ export const Footer = () => {
       <div className='footer__main'>
         <div className='footer__logo'>
           <img src={isMobile ? gears : gearsDesktop} alt="" />
-          <h2>JC Dev</h2>
+          <h2>
+            <Link to='/'>JC Dev</Link>
+          </h2>
         </div>
         <div className='footer__links'>
           <ul className='links__col'>
             <li className='links__col--title'>Links</li>
             <li>
-              <a href="#">Home</a>
+              <Link to='/'>Home</Link>
             </li>
             <li>
-              <a href="#">Skills</a>
+              <a href="#skills">Skills</a>
             </li>
             <li>
-              <a href="#">Projects</a>
+              <a href="#projects">Projects</a>
             </li>
           </ul>
           <ul className='links__col'>
             <li className='links__col--title'>Social</li>
             <li>
-              <a href="#">Linkedin</a>
+              <a href="https://www.linkedin.com/in/johnny-coral/">Linkedin</a>
             </li>
             <li>
               <a href="#">Github</a>

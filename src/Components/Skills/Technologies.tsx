@@ -59,7 +59,7 @@ export const Technologies = () => {
   })
 
   return (
-    <section className='skills'>
+    <section className='skills' id="skills">
       <SectionDivider section='Skills and Technologies' />
       <animated.div ref={triggerRef} style={fadeInSpring} className='skills__container'>
         {cards}

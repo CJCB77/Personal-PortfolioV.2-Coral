@@ -31,22 +31,23 @@ const Heading = () => {
     </h1>
     <h3 className="hero__description">
       <div className="hero__main--line">
-        <DownToTop delay={600} className="animation-wrap">
+        <DownToTop delay={500} className="animation-wrap">
           Lets work together to build a great user 
         </DownToTop> 
       </div>
       <div className="hero__main--line">
-        <DownToTop delay={600} className="animation-wrap">
+        <DownToTop delay={500} className="animation-wrap">
           experience and deliver software 
         </DownToTop> 
       </div>
       <div className="hero__main--line">
-        <DownToTop delay={600} className="animation-wrap">
+        <DownToTop delay={500} className="animation-wrap">
           solutions for your business.
         </DownToTop> 
       </div>
     </h3>
-    {!useIsMobile() && <FadeIn className="hero__cta" delay={1800}>
+    {/* Desktop contact button in hero */}
+    {!useIsMobile() && <FadeIn className="hero__cta" delay={1500}>
       <button className="hero__cta--btn btn--light">Lets Connect</button>
     </FadeIn>}
   </div>
