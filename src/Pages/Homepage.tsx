@@ -15,37 +15,40 @@ export const Homepage = () => {
 
   const isMobile = useIsMobile();
 
-  useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if(window.scrollY < 650) {
-        document.body.classList.remove('bg--light-blue');
-      }
-      if(window.scrollY > 650) {
+  function handleScroll() {
+    if(window.scrollY < 650) {
+      document.body.classList.remove('bg--light-blue');
+    }
+    if(window.scrollY > 650) {
+      document.body.classList.add('bg--light-blue');
+    }
+    if(window.scrollY > 2000) {
+      document.body.classList.remove('bg--light-blue');
+    }
+    if(isMobile){
+      if(window.scrollY > 4100) {
         document.body.classList.add('bg--light-blue');
       }
-      if(window.scrollY > 2000) {
+
+      if(window.scrollY > 5300) {
         document.body.classList.remove('bg--light-blue');
       }
-      if(isMobile){
-        if(window.scrollY > 4100) {
-          document.body.classList.add('bg--light-blue');
-        }
 
-        if(window.scrollY > 5300) {
-          document.body.classList.remove('bg--light-blue');
-        }
-
-      }else{
-        if(window.scrollY > 3500) {
-          document.body.classList.add('bg--light-blue');
-        }
-
-        if(window.scrollY > 4500) {
-          document.body.classList.remove('bg--light-blue');
-        }
+    }else{
+      if(window.scrollY > 3500) {
+        document.body.classList.add('bg--light-blue');
       }
- 
-    })
+
+      if(window.scrollY > 4500) {
+        document.body.classList.remove('bg--light-blue');
+      }
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    //Remove scroll listener
+    return () => window.removeEventListener('scroll', handleScroll);
   },[]);
 
   return (

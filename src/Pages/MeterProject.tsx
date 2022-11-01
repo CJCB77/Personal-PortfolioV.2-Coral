@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Footer } from '../Components/Footer/Footer'
 import Navbar from '../Components/Navbar/Navbar'
 //CSS
@@ -37,7 +37,7 @@ import FadeUpIntersection from '../Components/Animations/FadeUpIntersection';
 export const MeterProject = () => {
 
   const isMobile = useIsMobile();
-  //Carousel ref
+
    
   return (
     <div className='energy-meter-project'>
