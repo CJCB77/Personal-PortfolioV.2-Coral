@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 //Nomralize.css
 import './Normalize.css';
 //CSS
