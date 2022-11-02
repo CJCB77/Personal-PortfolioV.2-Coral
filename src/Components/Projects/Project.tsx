@@ -11,7 +11,7 @@ interface ProjectProps {
   imgMobile: string;
   imgDesktop: string;
   stack: string[];
-  path?: string;
+  path: string;
 }
 
 export const Project = ({imgMobile,imgDesktop,title,description,stack,path}:ProjectProps) => {
@@ -39,7 +39,7 @@ export const Project = ({imgMobile,imgDesktop,title,description,stack,path}:Proj
             <img src={useIsMobile() ? imgMobile : imgDesktop } alt="project image" />
             <div className='project__hover'>
               <button>
-                <Link to='/energy-meter-ocr' >View More</Link>
+                <Link to={path} >View More</Link>
               </button>
             </div>
           </div>

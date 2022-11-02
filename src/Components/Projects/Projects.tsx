@@ -53,6 +53,7 @@ export const Projects = () => {
           imgMobile={inventoryProject}
           imgDesktop={inventoryProjectDesktop}
           stack={[reactIcon, express, node, postgres,typescript]}
+          path='/inventory-system'
         />
 
         <Project 
@@ -62,6 +63,7 @@ export const Projects = () => {
           imgMobile={fashionProject}
           imgDesktop={fashionProjectDesktop}
           stack={[reactIcon, typescript, django, postgres]}
+          path='/online-store'
         />
 
         <Project 
@@ -71,6 +73,7 @@ export const Projects = () => {
           imgMobile={animalProject}
           imgDesktop={animalProjectDesktop}
           stack={[html,css,javascript,bootstrap]}
+          path='/energy-meter-ocr'
         />
       </div>
     </section>

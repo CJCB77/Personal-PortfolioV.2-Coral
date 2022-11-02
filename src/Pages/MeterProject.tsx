@@ -64,28 +64,32 @@ export const MeterProject = () => {
           </CarouselProvider>
         </FadeUpIntersection>
         <div className='project-details__content'>
-          <header className='project-details__header'>
-              <h1>Energy consumption OCR reading and billing Dashboard</h1>
-              <div className='stack'>
-                  <img src={reactIcon} alt="react logo" className='stack__icon'/>
-                  <img src={expressIcon} alt="express logo" className='stack__icon'/>
-                  <img src={nodeIcon} alt="node logo" className='stack__icon'/>
-                  <img src={postgresIcon} alt="postgres logo" className='stack__icon'/>
-                  <img src={kotlinIcon} alt="kotlin logo" className='stack__icon'/>
-                  <img src={awsIcon} alt="aws logo" className='stack__icon'/>
-              </div>
-          </header>
-          <p className='project-details__paragraph'>
-            Mobile application built in Kotlin designed for electric company workers. 
-            Obtains the reading of an energy meter with the use of the machine learning kit 
-            provided by Google along with custom image processing algorithms.
-          </p>
-          <p className='project-details__paragraph '>
-            Comes with a web dashboard for administration purposes. Energy reading tasks 
-            can be assigned from dashboard to workers by an administrator. Can register 
-            users/workers and clients with their respective households for monthly energy 
-            consumption billing.
-          </p>
+          <FadeUpIntersection>
+            <header className='project-details__header'>
+                <h1>Energy consumption OCR reading and billing Dashboard</h1>
+                <div className='stack'>
+                    <img src={reactIcon} alt="react logo" className='stack__icon'/>
+                    <img src={expressIcon} alt="express logo" className='stack__icon'/>
+                    <img src={nodeIcon} alt="node logo" className='stack__icon'/>
+                    <img src={postgresIcon} alt="postgres logo" className='stack__icon'/>
+                    <img src={kotlinIcon} alt="kotlin logo" className='stack__icon'/>
+                    <img src={awsIcon} alt="aws logo" className='stack__icon'/>
+                </div>
+            </header>
+          </FadeUpIntersection>
+          <FadeUpIntersection>
+            <p className='project-details__paragraph'>
+              Mobile application built in Kotlin designed for electric company workers. 
+              Obtains the reading of an energy meter with the use of the machine learning kit 
+              provided by Google along with custom image processing algorithms.
+            </p>
+            <p className='project-details__paragraph '>
+              Comes with a web dashboard for administration purposes. Energy reading tasks 
+              can be assigned from dashboard to workers by an administrator. Can register 
+              users/workers and clients with their respective households for monthly energy 
+              consumption billing.
+            </p>
+          </FadeUpIntersection>
           <FadeUpIntersection>
             <img src={isMobile ? architecture : architectureDesktop } alt="image of a microservice architecture" className='project-details__img' />
             <p className='project-details__paragraph'>

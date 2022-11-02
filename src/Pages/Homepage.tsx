@@ -47,8 +47,12 @@ export const Homepage = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    //Remove scroll listener
-    return () => window.removeEventListener('scroll', handleScroll);
+    //Remove scroll listener and remove bg--light-blue class
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.body.classList.remove('bg--light-blue');
+    }
+    
   },[]);
 
   return (

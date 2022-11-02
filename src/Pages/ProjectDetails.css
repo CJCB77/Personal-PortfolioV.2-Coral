@@ -1,8 +1,6 @@
-
-
 .project-details {
   margin: 2rem 0;
-  margin-bottom: 4rem;
+  margin-bottom: 15rem;
 }
 
 .project-details__header h1{
@@ -12,11 +10,10 @@
 
 .carousel__img {
   height: 60rem;
-  width: 100%;
 }
 
 .carousel__slider {
-  height: auto;
+  height: 65rem;
   text-align: center;
 }
 
@@ -31,12 +28,12 @@
 .stack__icon {
   width: 5rem;
   height: 5rem;
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 
 
 .project-details__paragraph {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   color: var(--black);
   margin-bottom: 4rem;
   line-height: 1.5;
@@ -109,9 +106,13 @@
     height: 20rem;
   }
 
+  .project-details {
+    margin-bottom: 5rem;
+  }
+
   .project-details__header {
     font-size: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 
   .project-details__header h1{
@@ -123,6 +124,11 @@
     margin: 2rem 0;
   }
 
+  .stack {
+    margin: 2rem 0;
+  }
+  
+
   .stack__icon {
     width: 3rem;
     height: 3rem;
@@ -131,6 +137,7 @@
 
   .project-details__paragraph {
     font-size: 1.4rem;
+    margin: 1rem 0;
   }
 
   .project-details__img {
