@@ -1,4 +1,4 @@
-import React from 'react'
+import { lazy, Suspense } from 'react'
 import SectionDivider from '../UtilityComponents/SectionDivider'
 import './Projects.css'
 //Projects Images mobile
@@ -24,58 +24,60 @@ import html from '../../assets/skills/html.png'
 import css from '../../assets/skills/css3.png'
 import javascript from '../../assets/skills/javascript.png'
 import bootstrap from '../../assets/skills/bootstrap.png'
-import database from '../../assets/images/databases.png'
-import databaseDesktop from '../../assets/images/database-medium.png'
 //Components
-import { Project } from './Project'
+const Project = lazy(() => import ('./Project'));
 
-export const Projects = () => {
+const Projects = () => {
 
   return (
     <section className='projects' id="projects">
       <SectionDivider section='Projects'/>
       <div className='projects__container'>
-        <Project 
-          title={"Water Meter Reader and Service Billing"} 
-          description={`Mobile application that extracts the reading of household analog 
-            water meters with OCR, along with a web administration panel for billing clients 
-            monthly consumption.`}
-          imgMobile={projectWaterMeter}
-          imgDesktop={projectWaterMeterDesktop}
-          stack={[reactIcon, express, node, postgres, kotlin, aws]}
-          path='/energy-meter-ocr'
-        />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Project 
+            title={"Water Meter Reader and Service Billing"} 
+            description={`Mobile application that extracts the reading of household analog 
+              water meters with OCR, along with a web administration panel for billing clients 
+              monthly consumption.`}
+            imgMobile={projectWaterMeter}
+            imgDesktop={projectWaterMeterDesktop}
+            stack={[reactIcon, express, node, postgres, kotlin, aws]}
+            path='/energy-meter-ocr'
+          />
 
-        <Project 
-          title={"Pharmacy Inventory System for Non Profit Tacita Caliente"} 
-          description={`Web inventory management system developed for tracking pharmacy 
-            supplies like medicine in the non profit organization Tacita Caliente.`}
-          imgMobile={inventoryProject}
-          imgDesktop={inventoryProjectDesktop}
-          stack={[reactIcon, express, node, postgres,typescript]}
-          path='/inventory-system'
-        />
+          <Project 
+            title={"Pharmacy Inventory System for Non Profit Tacita Caliente"} 
+            description={`Web inventory management system developed for tracking pharmacy 
+              supplies like medicine in the non profit organization Tacita Caliente.`}
+            imgMobile={inventoryProject}
+            imgDesktop={inventoryProjectDesktop}
+            stack={[reactIcon, express, node, postgres,typescript]}
+            path='/inventory-system'
+          />
 
-        <Project 
-          title={"Fashion Store Ecommerce"} 
-          description={`Website for a men’s clothing online store, great UI design, different 
-            categories and filtering for clothes, shopping cart integration and payment. `}
-          imgMobile={fashionProject}
-          imgDesktop={fashionProjectDesktop}
-          stack={[reactIcon, typescript, django, postgres]}
-          path='/online-store'
-        />
+          <Project 
+            title={"Fashion Store Ecommerce"} 
+            description={`Website for a men’s clothing online store, great UI design, different 
+              categories and filtering for clothes, shopping cart integration and payment. `}
+            imgMobile={fashionProject}
+            imgDesktop={fashionProjectDesktop}
+            stack={[reactIcon, typescript, django, postgres]}
+            path='/online-store'
+          />
 
-        <Project 
-          title={"Animal Rescue website"} 
-          description={`Beautiful website for an animal shelter or rescue type NPO, displays info, showcase 
-            pets for adoption to potential foster family and accepts donations. `}
-          imgMobile={animalProject}
-          imgDesktop={animalProjectDesktop}
-          stack={[html,css,javascript,bootstrap]}
-          path='/energy-meter-ocr'
-        />
+          <Project 
+            title={"Animal Rescue website"} 
+            description={`Beautiful website for an animal shelter or rescue type NPO, displays info, showcase 
+              pets for adoption to potential foster family and accepts donations. `}
+            imgMobile={animalProject}
+            imgDesktop={animalProjectDesktop}
+            stack={[html,css,javascript,bootstrap]}
+            path='/animal-rescue'
+          />
+        </Suspense>
       </div>
     </section>
   )
 }
+
+export default Projects

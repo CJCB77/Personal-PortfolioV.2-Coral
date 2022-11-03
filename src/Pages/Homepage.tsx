@@ -1,17 +1,17 @@
-import React, {useEffect} from 'react'
+import {Suspense, useEffect, lazy} from 'react'
 //Components
 import Navbar from '../Components/Navbar/Navbar';
 import Hero from '../Components/Hero/Hero';
-import About from '../Components/About/About';
-import { Technologies } from '../Components/Skills/Technologies';
-import { Projects } from '../Components/Projects/Projects';
-import { ContactForm } from '../Components/Contact/ContactForm';
-import { Footer } from '../Components/Footer/Footer';
 //Hooks
 import useIsMobile from '../CustomHooks/useIsMobile';
+//Lazy Loading
+const About = lazy(() => import('../Components/About/About'));
+const Technologies = lazy(() => import('../Components/Skills/Technologies'));
+const Projects = lazy(() => import('../Components/Projects/Projects'));
+const ContactForm = lazy(() => import('../Components/Contact/ContactForm'));
+const Footer = lazy(() => import('../Components/Footer/Footer'));
 
-
-export const Homepage = () => {
+const Homepage = () => {
 
   const isMobile = useIsMobile();
 
@@ -57,13 +57,17 @@ export const Homepage = () => {
 
   return (
     <section className='homepage'>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <Technologies/>
-      <Projects/>
-      <ContactForm/>
-      <Footer />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Navbar/>
+        <Hero/>
+        <About/>
+        <Technologies/>
+        <Projects/>
+        <ContactForm/>
+        <Footer />
+      </Suspense>
     </section>
   )
 }
+
+export default Homepage

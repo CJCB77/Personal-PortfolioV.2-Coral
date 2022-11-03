@@ -1,4 +1,3 @@
-import React from 'react'
 //Images
 import Programmer from '../../assets/images/hero-img.png';
 import HeroImgMobile from '../../assets/images/hero-img-mobile.png';

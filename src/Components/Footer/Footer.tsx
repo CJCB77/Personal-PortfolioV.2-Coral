@@ -1,4 +1,3 @@
-import React from 'react'
 //Css
 import './Footer.css'
 //Hooks
@@ -7,9 +6,10 @@ import useIsMobile from '../../CustomHooks/useIsMobile'
 import gears from '../../assets/icons/logo-gears.svg'
 import gearsDesktop from '../../assets/icons/logo-gears-desktop.svg'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 
 
-export const Footer = () => {
+const Footer = () => {
   
   const isMobile = useIsMobile(); 
 
@@ -29,10 +29,10 @@ export const Footer = () => {
               <Link to='/'>Home</Link>
             </li>
             <li>
-              <a href="#skills">Skills</a>
+              <HashLink to="/#skills">Skills</HashLink>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <HashLink to="/#projects">Projects</HashLink>
             </li>
           </ul>
           <ul className='links__col'>
@@ -58,3 +58,5 @@ export const Footer = () => {
     </section>
   )
 }
+
+export default Footer

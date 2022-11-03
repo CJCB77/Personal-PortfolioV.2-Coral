@@ -1,26 +1,29 @@
-import React from 'react';
+import { Suspense,lazy } from 'react';
 //Nomralize.css
 import './Normalize.css';
 //CSS
 import './App.css';
-import { Homepage } from './Pages/Homepage';
 import {Route,Routes} from 'react-router-dom';
-import { MeterProject } from './Pages/MeterProject';
-import InventoryProject from './Pages/InventoryProject';
-import { ClothingStore } from './Pages/ClothingStore';
-
+const Homepage = lazy(() => import ('./Pages/Homepage'));
+const MeterProject = lazy(() => import ('./Pages/MeterProject'));
+const InventoryProject = lazy(() => import ('./Pages/InventoryProject'));
+const ClothingStoreProject = lazy(() => import ('./Pages/ClothingStore'));
+const AnimalRescueProject = lazy(() => import ('./Pages/AnimalRescueProject'));
 
 
 function App() {
 
   return (
     <div className="App">
-      <Routes>
-        <Route path='/' element={<Homepage />} />
-        <Route path='/energy-meter-ocr' element={<MeterProject />} />
-        <Route path='/inventory-system' element={<InventoryProject />} />
-        <Route path='/online-store' element={<ClothingStore />} />
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path='/' element={<Homepage />} />
+          <Route path='/energy-meter-ocr' element={<MeterProject />} />
+          <Route path='/inventory-system' element={<InventoryProject />} />
+          <Route path='/online-store' element={<ClothingStoreProject />} />
+          <Route path='/animal-rescue' element={<AnimalRescueProject />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }

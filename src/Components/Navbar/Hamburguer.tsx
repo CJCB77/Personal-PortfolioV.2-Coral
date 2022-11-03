@@ -1,6 +1,4 @@
 import { useSpring, animated} from 'react-spring'
-//Animations
-import FadeIn from '../Animations/FadeIn'
 //CSS
 import './Hamburguer.css'
 

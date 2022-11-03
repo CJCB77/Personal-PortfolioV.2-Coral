@@ -1,17 +1,18 @@
-import React from 'react'
+import { useRef } from 'react';
 import { animated, useSpring } from '@react-spring/web'
 import { useInterventionObserver } from '../../CustomHooks/useInterventionObserver';
 
 interface Props {
   children: JSX.Element[] | JSX.Element
+  threshold?: number
 }
 
 
-const FadeUpIntersection:React.FC<Props> = ({children}:Props) => {
+const FadeUpIntersection:React.FC<Props> = ({children,threshold}:Props) => {
 
-  const elementRef = React.useRef(null);
+  const elementRef = useRef(null);
   const entry = useInterventionObserver(elementRef, {
-    threshold: 0.10,
+    threshold: threshold || 0.1,
     freezeOnceVisible: true
   });
 

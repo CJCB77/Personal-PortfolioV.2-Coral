@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useSpring, animated} from 'react-spring'
 //Components
 import MobileMenu from './MobileMenu'
@@ -11,6 +11,7 @@ import GitHubIcon from '../../assets/icons/github.svg'
 //CSS
 import './Navbar.css'
 import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 
 function Navbar(): JSX.Element {
   //State for toggling the menu on mobile devices
@@ -41,13 +42,13 @@ function Navbar(): JSX.Element {
               </h1>
               {!useIsMobile() && <ul className='nav__list'>
                 <li className='nav__list--item'>
-                  <a href="#about">About</a>
+                  <HashLink to="/#about">About</HashLink>
                 </li>
                 <li className='nav__list--item'>
-                  <a href="#skills">Skills</a>
+                  <HashLink to="/#skills">Skills</HashLink>
                 </li>
                 <li className='nav__list--item'>
-                  <a href="#projects">Projects</a>
+                  <HashLink to="/#projects">Projects</HashLink>
                 </li>
               </ul>}
             </div>
@@ -62,7 +63,7 @@ function Navbar(): JSX.Element {
                 </a>
               </div>
 
-              <a href="#contact" className='nav__btn-contact  btn--light'>Contact me</a>        
+              <HashLink to="/#contact" className='nav__btn-contact  btn--light'>Contact me</HashLink>        
             </div>
             } 
       </animated.nav>

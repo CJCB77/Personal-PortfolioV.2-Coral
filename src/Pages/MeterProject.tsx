@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import { Footer } from '../Components/Footer/Footer'
+import Footer  from '../Components/Footer/Footer'
 import Navbar from '../Components/Navbar/Navbar'
 //CSS
 import 'pure-react-carousel/dist/react-carousel.es.css';
@@ -34,7 +33,7 @@ import useIsMobile from '../CustomHooks/useIsMobile';
 //Animations
 import FadeUpIntersection from '../Components/Animations/FadeUpIntersection';
 
-export const MeterProject = () => {
+const MeterProject = () => {
 
   const isMobile = useIsMobile();
 
@@ -166,3 +165,5 @@ export const MeterProject = () => {
     </div>
   )
 }
+
+export default MeterProject

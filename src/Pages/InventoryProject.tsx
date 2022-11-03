@@ -1,6 +1,6 @@
 import { CarouselProvider, Slide, Slider } from 'pure-react-carousel'
-import React from 'react'
-import { Footer } from '../Components/Footer/Footer'
+import { Fragment } from 'react'
+import Footer from '../Components/Footer/Footer'
 import Navbar from '../Components/Navbar/Navbar'
 //CSS
 import './ProjectDetails.css'
@@ -30,7 +30,7 @@ const InventoryProject = () => {
   const isMobile = useIsMobile();
 
   return (
-    <React.Fragment>
+    <Fragment>
       <Navbar />
       <section className='project-details'>
         <FadeUpIntersection>
@@ -102,8 +102,9 @@ const InventoryProject = () => {
           </div>
       </section>
       <Footer />
-    </React.Fragment>
+    </Fragment>
   )
 }
 
 export default InventoryProject
+

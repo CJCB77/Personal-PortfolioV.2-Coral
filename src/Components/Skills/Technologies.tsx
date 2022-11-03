@@ -1,4 +1,4 @@
-import React from 'react'
+import { useRef } from 'react'
 import SectionDivider from '../UtilityComponents/SectionDivider'
 import './Technologies.css'
 //Hooks
@@ -24,7 +24,7 @@ import { SkillCard } from './SkillCard'
 import {useSpring, animated} from 'react-spring'
 
 
-export const Technologies = () => {
+const Technologies = () => {
 
   const skillsList = [
     {"name":"HTML5", "image":Html}, 
@@ -49,7 +49,7 @@ export const Technologies = () => {
   })
   
   //Intersection observer for fade in animation
-  const triggerRef = React.useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLDivElement>(null);
   const dataRef = useInterventionObserver(triggerRef, { freezeOnceVisible: true,threshold: 0.1 });
   
   const fadeInSpring = useSpring({
@@ -67,3 +67,5 @@ export const Technologies = () => {
     </section>
   )
 }
+
+export default Technologies

@@ -26,10 +26,9 @@
   font-size: 3rem;
 }
 
-.about__body p:last-child{
-  margin-top: 15rem;
+.about__body > :last-child {
+  margin-top: 10rem;
 }
-
 
 /*Mobile*/
 @media (max-width:768px){

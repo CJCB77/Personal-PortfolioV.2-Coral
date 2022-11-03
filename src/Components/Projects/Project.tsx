@@ -1,4 +1,4 @@
-import React from 'react'
+import { useRef } from 'react';
 //Hooks
 import useIsMobile from '../../CustomHooks/useIsMobile'
 import {useSpring, animated} from 'react-spring'
@@ -14,14 +14,14 @@ interface ProjectProps {
   path: string;
 }
 
-export const Project = ({imgMobile,imgDesktop,title,description,stack,path}:ProjectProps) => {
+const Project = ({imgMobile,imgDesktop,title,description,stack,path}:ProjectProps) => {
 
   const renderStack = stack.map((tech, index) => {
     return <img key={index} src={tech} alt={'stack used in project icon'} className="stack-icon" />
   })
   
   //Create an intersection observer to trigger animation when element is visible
-  const elementRef = React.useRef(null);
+  const elementRef = useRef(null);
   const entry = useInterventionObserver(elementRef, {
     threshold: 0.10,
     freezeOnceVisible: true
@@ -55,3 +55,5 @@ export const Project = ({imgMobile,imgDesktop,title,description,stack,path}:Proj
       </animated.article>
   )
 }
+
+export default Project

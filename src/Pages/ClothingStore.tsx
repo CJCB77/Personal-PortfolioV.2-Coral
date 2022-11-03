@@ -1,5 +1,5 @@
-import React from 'react'
-import { Footer } from '../Components/Footer/Footer'
+import { Fragment } from 'react'
+import Footer from '../Components/Footer/Footer'
 import Navbar from '../Components/Navbar/Navbar'
 import { CarouselProvider, Slide, Slider } from 'pure-react-carousel'
 //CSS
@@ -25,12 +25,12 @@ import typescriptIcon from '../assets/skills/typescript.png'
 import djangoIcon from '../assets/skills/django.png'
 import postgresIcon from '../assets/skills/postgres.png'
 
-export const ClothingStore = () => {
+const ClothingStore = () => {
 
   const isMobile = useIsMobile();
 
   return (
-    <React.Fragment>
+    <Fragment>
       <Navbar />
       <section className='project-details'>
       <FadeUpIntersection>
@@ -88,6 +88,8 @@ export const ClothingStore = () => {
         </div>
       </section>
       <Footer />    
-    </React.Fragment>
+    </Fragment>
   )
 }
+
+export default ClothingStore

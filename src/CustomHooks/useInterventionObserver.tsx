@@ -1,5 +1,4 @@
-import React from 'react'
-import {useEffect} from 'react'
+import {useEffect,useState} from 'react'
 
 export const useInterventionObserver = (elementRef:React.RefObject<HTMLElement>, {
   threshold = 0.5,
@@ -8,7 +7,7 @@ export const useInterventionObserver = (elementRef:React.RefObject<HTMLElement>,
   freezeOnceVisible = false
 }) => {
   
-  const [entry, setEntry] = React.useState<IntersectionObserverEntry>();
+  const [entry, setEntry] = useState<IntersectionObserverEntry>();
   const frozen = entry?.isIntersecting && freezeOnceVisible;
 
   const updateEntry = ([entry]: IntersectionObserverEntry[]) => {
