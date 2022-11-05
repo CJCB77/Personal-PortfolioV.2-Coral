@@ -40,7 +40,7 @@ const Homepage = () => {
         document.body.classList.add('bg--light-blue');
       }
 
-      if(window.scrollY > 4500) {
+      if(window.scrollY > 5800) {
         document.body.classList.remove('bg--light-blue');
       }
     }

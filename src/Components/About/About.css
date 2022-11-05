@@ -51,14 +51,14 @@
     color: var(--blue-navy);
   }
 
-  .about__body p:last-child{
+  .about__body > :last-child {
     margin-top: 0rem;
   }
 
   .about__img{
     display: flex;
     justify-content: center;
-    margin: 3rem 0;
+    margin: 6rem 0;
   }
 
   .octopus-img{

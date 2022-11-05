@@ -38,10 +38,10 @@ const Footer = () => {
           <ul className='links__col'>
             <li className='links__col--title'>Social</li>
             <li>
-              <a href="https://www.linkedin.com/in/johnny-coral/">Linkedin</a>
+              <a href="https://www.linkedin.com/in/johnny-coral/" target="_blank" >Linkedin</a>
             </li>
             <li>
-              <a href="#">Github</a>
+              <a href="https://github.com/CJCB77" target="_blank" >Github</a>
             </li>
           </ul>
           <ul className='links__col'>
