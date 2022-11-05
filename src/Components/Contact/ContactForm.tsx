@@ -3,8 +3,8 @@ import SectionDivider from '../UtilityComponents/SectionDivider'
 //Css
 import './ContactForm.css'
 //Images
-import messageImg from '../../assets/images/contact-img-mobile.png'
-import messageImgDesktop from '../../assets/images/contact-desktop.png'
+import messageImg from '../../assets/images/contact-img-mobile.webp'
+import messageImgDesktop from '../../assets/images/contact-desktop.webp'
 import messageIcon from '../../assets/icons/message.svg'
 //Hooks
 import useIsMobile from '../../CustomHooks/useIsMobile'
@@ -79,7 +79,7 @@ const ContactForm = () => {
           </form>
         </FadeUpIntersection>
       </div>
-      <animated.img ref={imgRef} src={isMobile? messageImg : messageImgDesktop } style={fadeInImg} 
+      <animated.img loading='lazy' ref={imgRef} src={isMobile? messageImg : messageImgDesktop } style={fadeInImg} 
         alt="sending message image" className='contact__img'/>
     </section>
   )

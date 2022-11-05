@@ -1,4 +1,3 @@
-import { CarouselProvider, Slide, Slider } from 'pure-react-carousel'
 import { Fragment } from 'react'
 import Footer from '../Components/Footer/Footer'
 import Navbar from '../Components/Navbar/Navbar'
@@ -24,6 +23,7 @@ import typescriptIcon from '../assets/skills/typescript.png'
 import useIsMobile from '../CustomHooks/useIsMobile'
 //Animations
 import FadeUpIntersection from '../Components/Animations/FadeUpIntersection'
+import Carousel from '../Components/UtilityComponents/Carousel'
 
 const InventoryProject = () => {
 
@@ -34,22 +34,7 @@ const InventoryProject = () => {
       <Navbar />
       <section className='project-details'>
         <FadeUpIntersection>
-          <CarouselProvider className='carousel' 
-                naturalSlideWidth={100} 
-                naturalSlideHeight={40} 
-                totalSlides={6}
-                isPlaying={true}
-                interval={3000}
-                >
-              <Slider className='carousel__slider'>
-                <Slide index={0}><img className='carousel__img' src={mainImg}  alt='image of main page'/></Slide>
-                <Slide index={1}><img className='carousel__img' src={loginImg} alt='image of login'/></Slide>
-                <Slide index={2}><img className='carousel__img' src={filterImg} alt='image filtering medicine list'/></Slide>
-                <Slide index={3}><img className='carousel__img' src={updateImg} alt='image updating a medicine information'/></Slide>
-                <Slide index={4}><img className='carousel__img' src={clientsImg} alt='listing saved client records'/></Slide>
-                <Slide index={5}><img className='carousel__img' src={addClientImg} alt='adding a new client to record'/></Slide>
-              </Slider>
-          </CarouselProvider>
+          <Carousel imagesArray={[mainImg,loginImg,filterImg,addClientImg,updateImg,clientsImg]} />
         </FadeUpIntersection>
           <div className='project-details__content'>
             <FadeUpIntersection>

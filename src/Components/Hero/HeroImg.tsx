@@ -1,6 +1,6 @@
 //Images
-import Programmer from '../../assets/images/hero-img.png';
-import HeroImgMobile from '../../assets/images/hero-img-mobile.png';
+import Programmer from '../../assets/images/hero-img.webp';
+import HeroImgMobile from '../../assets/images/hero-img-mobile.webp';
 import Python from '../../assets/images/python.svg';
 import Javascript from '../../assets/images/javascript.svg';
 import Responsive from '../../assets/images/responsive.svg';
@@ -31,25 +31,27 @@ const HeroImg = () => {
   })
 
   return (
+
     <div className="hero__img">
         {/* Fade in the main image */}
-        <FadeIn delay={700}>
+        <FadeIn delay={600}>
           <img src={useIsMobile()? HeroImgMobile : Programmer} alt="Hero Image" className="programmer-img"/>
         </FadeIn>
         {/* The skills images floating in absolute position       */}
-        <FadeIn delay={900}>
+        <FadeIn delay={700}>
           <animated.img style={floatProps} src={Css} alt="css styling image" className="css-img" />
         </FadeIn>
-        <FadeIn delay={1300}>
+        <FadeIn delay={900}>
           <animated.img style={floatPropsReverse} src={Python} alt="python file image" className="python-img" />
         </FadeIn>
-        <FadeIn delay={1500}>
+        <FadeIn delay={1000}>
           <animated.img style={floatProps} src={Javascript} alt="javascript file image" className="js-img" />
         </FadeIn>
-        <FadeIn delay={1100}>
+        <FadeIn delay={800}>
           <animated.img style={floatPropsReverse} src={Responsive} alt="responsive design image" className="responsive-img" />
         </FadeIn>
       </div>
+
   )
 }
 

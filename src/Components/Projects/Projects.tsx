@@ -2,15 +2,15 @@ import { lazy, Suspense } from 'react'
 import SectionDivider from '../UtilityComponents/SectionDivider'
 import './Projects.css'
 //Projects Images mobile
-import projectWaterMeter from '../../assets/images/projectWaterMeter.png'
-import inventoryProject from '../../assets/images/inventory.png'
-import fashionProject from '../../assets/images/fashion-store.png'
-import animalProject from '../../assets/images/animal-rescue.png'
+import projectWaterMeter from '../../assets/images/projectWaterMeter.webp'
+import inventoryProject from '../../assets/images/inventory.webp'
+import fashionProject from '../../assets/images/fashion-store.webp'
+import animalProject from '../../assets/images/animal-rescue.webp'
 //Projects Images desktop
-import projectWaterMeterDesktop from '../../assets/images/projectWater-medium.png'
-import inventoryProjectDesktop from '../../assets/images/inventory-medium.png'
-import fashionProjectDesktop from '../../assets/images/fashion-medium.png'
-import animalProjectDesktop from '../../assets/images/animal-medium.png'
+import projectWaterMeterDesktop from '../../assets/images/projectWater-medium.webp'
+import inventoryProjectDesktop from '../../assets/images/inventory-medium.webp'
+import fashionProjectDesktop from '../../assets/images/fashion-medium.webp'
+import animalProjectDesktop from '../../assets/images/animal-medium.webp'
 //Skill icons
 import reactIcon from '../../assets/skills/react.png'
 import express from '../../assets/skills/express.png'
@@ -24,6 +24,7 @@ import html from '../../assets/skills/html.png'
 import css from '../../assets/skills/css3.png'
 import javascript from '../../assets/skills/javascript.png'
 import bootstrap from '../../assets/skills/bootstrap.png'
+import Spinner from '../UtilityComponents/Spinner'
 //Components
 const Project = lazy(() => import ('./Project'));
 
@@ -33,7 +34,7 @@ const Projects = () => {
     <section className='projects' id="projects">
       <SectionDivider section='Projects'/>
       <div className='projects__container'>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Spinner/>}>
           <Project 
             title={"Water Meter Reader and Service Billing"} 
             description={`Mobile application that extracts the reading of household analog 

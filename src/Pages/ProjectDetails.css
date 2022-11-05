@@ -8,15 +8,6 @@
   font-size: 3.6rem;
 }
 
-.carousel__img {
-  height: 60rem;
-}
-
-.carousel__slider {
-  height: 65rem;
-  text-align: center;
-}
-
 .project-details__content {
   margin: 4rem 0;
 }
@@ -94,18 +85,6 @@
 }
 
 @media (max-width: 768px) {
-  .carousel {
-    margin: 0 -2rem;
-  }
-
-  .carousel__img {
-    height: 20rem;
-  }
-
-  .carousel__slider {
-    height: 20rem;
-  }
-
   .project-details {
     margin-bottom: 5rem;
   }

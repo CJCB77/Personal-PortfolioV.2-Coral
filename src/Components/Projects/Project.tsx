@@ -36,7 +36,7 @@ const Project = ({imgMobile,imgDesktop,title,description,stack,path}:ProjectProp
   return (
     <animated.article ref={elementRef} style={props} className='project'>
           <div className='project__img'>
-            <img src={useIsMobile() ? imgMobile : imgDesktop } alt="project image" />
+            <img loading='lazy' src={useIsMobile() ? imgMobile : imgDesktop } alt="project image" />
             <div className='project__hover'>
               <button>
                 <Link to={path} >View More</Link>

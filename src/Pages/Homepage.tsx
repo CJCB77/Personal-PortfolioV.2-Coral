@@ -4,6 +4,7 @@ import Navbar from '../Components/Navbar/Navbar';
 import Hero from '../Components/Hero/Hero';
 //Hooks
 import useIsMobile from '../CustomHooks/useIsMobile';
+import Spinner from '../Components/UtilityComponents/Spinner';
 //Lazy Loading
 const About = lazy(() => import('../Components/About/About'));
 const Technologies = lazy(() => import('../Components/Skills/Technologies'));
@@ -57,7 +58,7 @@ const Homepage = () => {
 
   return (
     <section className='homepage'>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Spinner/>}>
         <Navbar/>
         <Hero/>
         <About/>

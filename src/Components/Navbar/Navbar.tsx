@@ -1,7 +1,6 @@
-import { useState } from 'react'
+import { useState,lazy, Suspense } from 'react'
 import { useSpring, animated} from 'react-spring'
 //Components
-import MobileMenu from './MobileMenu'
 import Hamburguer from './Hamburguer'
 //Custom Hooks
 import useIsMobile from '../../CustomHooks/useIsMobile'
@@ -12,6 +11,9 @@ import GitHubIcon from '../../assets/icons/github.svg'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
 import { HashLink } from 'react-router-hash-link';
+//Lazy load mobile menu
+const MobileMenu = lazy(() => import('./MobileMenu'));
+
 
 function Navbar(): JSX.Element {
   //State for toggling the menu on mobile devices
@@ -68,7 +70,11 @@ function Navbar(): JSX.Element {
             } 
       </animated.nav>
       {/*If mobile viewport display mobile menu */}
-      {useIsMobile() && <MobileMenu openMenu={openMenu} toggleMenu={toggleMenu} />}
+      {useIsMobile() && 
+        <Suspense fallback={<div>Loading...</div>}>
+          <MobileMenu openMenu={openMenu} toggleMenu={toggleMenu} />
+        </Suspense>
+      }
     </header>
   )
 }

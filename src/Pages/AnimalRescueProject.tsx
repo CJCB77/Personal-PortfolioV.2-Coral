@@ -1,7 +1,6 @@
 import { Fragment } from 'react';
 import Footer  from '../Components/Footer/Footer'
 import Navbar from '../Components/Navbar/Navbar'
-import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import FadeUpIntersection from '../Components/Animations/FadeUpIntersection';
 //Images
 import heroImg from '../assets/images/projects/animal-rescue/hero.png'
@@ -19,6 +18,7 @@ import htmlIcon from '../assets/skills/html.png'
 import javascriptIcon from '../assets/skills/javascript.png'
 import bootstrapIcon from '../assets/skills/bootstrap.png'
 import useIsMobile from '../CustomHooks/useIsMobile';
+import Carousel from '../Components/UtilityComponents/Carousel';
 
 
 const AnimalRescueProject = () => {
@@ -31,19 +31,12 @@ const AnimalRescueProject = () => {
       <section className='project-details'>
         <div className='project-details__container'>
           <FadeUpIntersection>
-            <CarouselProvider className='carousel' 
-                naturalSlideWidth={100} 
-                naturalSlideHeight={40} 
-                totalSlides={3}
-                isPlaying={true}
-                interval={3000}
-                >
-              <Slider className='carousel__slider'>
-                <Slide index={0}><img className='carousel__img' src={heroImg} alt=''/></Slide>
-                <Slide index={1}><img className='carousel__img' src={heroImg2} alt=''/></Slide>
-                <Slide index={2}><img className='carousel__img' src={heroImg3} alt=''/></Slide>
-              </Slider>
-            </CarouselProvider>
+            <Carousel imagesArray={[
+              heroImg,
+              heroImg2,
+              heroImg3,
+              ]}
+            />
           </FadeUpIntersection>
           <div className='project-details__content'>
             <FadeUpIntersection>
@@ -66,7 +59,6 @@ const AnimalRescueProject = () => {
               <img className='project-details__img' src={isMobile? displayMobile2 : display2} alt=''/>
               <img className='project-details__img' src={isMobile? displayMobile3 : display3} alt=''/>
             </FadeUpIntersection>
-
           </div>
         </div>
       </section>

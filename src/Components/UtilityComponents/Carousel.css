@@ -1,0 +1,32 @@
+.carousel {
+  height: 60rem;
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow:hidden;
+}
+
+.carousel__slide {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  transition: all 1s ease;
+}
+
+.carousel__img {
+  height: 60rem;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 20rem;
+  }
+
+  .carousel__img {
+    height: 20rem;
+    width: auto;
+  }
+}
+  

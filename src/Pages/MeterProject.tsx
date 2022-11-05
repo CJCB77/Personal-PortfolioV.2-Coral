@@ -1,25 +1,23 @@
 import Footer  from '../Components/Footer/Footer'
 import Navbar from '../Components/Navbar/Navbar'
 //CSS
-import 'pure-react-carousel/dist/react-carousel.es.css';
 import './ProjectDetails.css'
 //Images
-import image1 from '../assets/images/projects/water-meter/meter1.png'
-import image2 from '../assets/images/projects/water-meter/meter2.png'
-import image3 from '../assets/images/projects/water-meter/meter3.png'
-import image4 from '../assets/images/projects/water-meter/meter4.png'
-import image5 from '../assets/images/projects/water-meter/meter5.png'
-import image6 from '../assets/images/projects/water-meter/meter6.png'
-import image7 from '../assets/images/projects/water-meter/meter7.png'
-import architecture from '../assets/images/projects/water-meter/architecture.png'
-import architectureDesktop from '../assets/images/projects/water-meter/architecture-desktop.png'
-import mobileApp1 from '../assets/images/projects/water-meter/mobile-app1.png'
-import mobileAppDesktop1 from '../assets/images/projects/water-meter/mobile-app1-desktop.png'
-import mobileApp2 from '../assets/images/projects/water-meter/mobile-app2.png'
-import mobileAppDesktop2 from '../assets/images/projects/water-meter/mobile-app2-desktop.png'
-import bill from '../assets/images/projects/water-meter/bill.png'
-import billDesktop from '../assets/images/projects/water-meter/bill-desktop.png'
-import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
+import image1 from '../assets/images/projects/water-meter/meter1.webp'
+import image2 from '../assets/images/projects/water-meter/meter2.webp'
+import image3 from '../assets/images/projects/water-meter/meter3.webp'
+import image4 from '../assets/images/projects/water-meter/meter4.webp'
+import image5 from '../assets/images/projects/water-meter/meter5.webp'
+import image6 from '../assets/images/projects/water-meter/meter6.webp'
+import image7 from '../assets/images/projects/water-meter/meter7.webp'
+import architecture from '../assets/images/projects/water-meter/architecture.webp'
+import architectureDesktop from '../assets/images/projects/water-meter/architecture-desktop.webp'
+import mobileApp1 from '../assets/images/projects/water-meter/mobile-app1.webp'
+import mobileAppDesktop1 from '../assets/images/projects/water-meter/mobile-app1-desktop.webp'
+import mobileApp2 from '../assets/images/projects/water-meter/mobile-app2.webp'
+import mobileAppDesktop2 from '../assets/images/projects/water-meter/mobile-app2-desktop.webp'
+import bill from '../assets/images/projects/water-meter/bill.webp'
+import billDesktop from '../assets/images/projects/water-meter/bill-desktop.webp'
 
 //Icons
 import reactIcon from '../assets/skills/react.png'
@@ -32,6 +30,7 @@ import useIsMobile from '../CustomHooks/useIsMobile';
 
 //Animations
 import FadeUpIntersection from '../Components/Animations/FadeUpIntersection';
+import Carousel from '../Components/UtilityComponents/Carousel'
 
 const MeterProject = () => {
 
@@ -41,27 +40,10 @@ const MeterProject = () => {
   return (
     <div className='energy-meter-project'>
       <Navbar />
+      <FadeUpIntersection>
+        <Carousel imagesArray={[image1,image2,image3,image4,image5,image6,image7]} />
+      </FadeUpIntersection>
       <section className='project-details'>
-        <FadeUpIntersection>
-          <CarouselProvider className='carousel' 
-              naturalSlideWidth={100} 
-              naturalSlideHeight={40} 
-              totalSlides={7}
-              isPlaying={true}
-              interval={3000}
-              >
-            <Slider className='carousel__slider'>
-              <Slide index={0}><img className='carousel__img' src={image1} alt=''/></Slide>
-              <Slide index={1}><img className='carousel__img' src={image2} alt=''/></Slide>
-              <Slide index={2}><img className='carousel__img' src={image3} alt=''/></Slide>
-              <Slide index={3}><img className='carousel__img' src={image4} alt=''/></Slide>
-              <Slide index={4}><img className='carousel__img' src={image5} alt=''/></Slide>
-              <Slide index={5}><img className='carousel__img' src={image6} alt=''/></Slide>
-              <Slide index={6}><img className='carousel__img' src={image7} alt=''/></Slide>
-            </Slider>
-            
-          </CarouselProvider>
-        </FadeUpIntersection>
         <div className='project-details__content'>
           <FadeUpIntersection>
             <header className='project-details__header'>

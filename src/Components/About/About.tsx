@@ -2,8 +2,8 @@ import SectionDivider from '../UtilityComponents/SectionDivider';
 //CSS
 import './About.css';
 //Images
-import OctopusMobile from "../../assets/images/aboutMobile.png";
-import Octopus from "../../assets/images/about.png";
+import OctopusMobile from "../../assets/images/aboutMobile.webp";
+import Octopus from "../../assets/images/about.webp";
 //Hooks
 import useIsMobile from '../../CustomHooks/useIsMobile';
 //Spring
@@ -42,7 +42,7 @@ const About = () => {
           </FadeUpIntersection>
           {/*If on mobile show image second*/}
           {useIsMobile() && <animated.div style={floatSpring} className='about__img'>
-            <img src={OctopusMobile} alt="image of an octopus multitasking" className='octopus-img' />
+            <img loading='lazy' src={OctopusMobile} alt="image of an octopus multitasking" className='octopus-img' />
           </animated.div>}
 
           <FadeUpIntersection>

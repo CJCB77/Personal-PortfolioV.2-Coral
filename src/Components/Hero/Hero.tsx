@@ -16,7 +16,7 @@ const Hero = () => {
 
       {/*Mobile contact button version */}
       {useIsMobile() && 
-      <FadeIn className="hero__cta" delay={1500}>
+      <FadeIn className="hero__cta" delay={1000}>
           <a href="#contact" className="hero__cta--btn btn--light">Lets Connect</a>
       </FadeIn>}
     </section>
