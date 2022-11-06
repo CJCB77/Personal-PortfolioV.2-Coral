@@ -11,6 +11,7 @@ import LeftToRight from '../Animations/LeftToRight'
 import LoopRight from '../Animations/LoopRight'
 import FadeIn from '../Animations/FadeIn'
 import { HashLink } from 'react-router-hash-link';
+import { useEffect } from 'react'
 
 
 
@@ -20,6 +21,7 @@ interface Props {
 }
 
 function MobileMenu({openMenu,toggleMenu}: Props): JSX.Element {
+
 
   //Spring animation properties mobile menu
   const menuStyles = useSpring({
@@ -33,6 +35,20 @@ function MobileMenu({openMenu,toggleMenu}: Props): JSX.Element {
   const handleClick = () => {
     toggleMenu()
   }
+
+  useEffect(() => {
+    const originalOverflow = window.getComputedStyle(document.body).overflow
+    if(openMenu){
+      document.body.style.overflow = 'hidden'
+    }else{
+      document.body.style.overflow = originalOverflow
+    }
+
+    return () => {
+      document.body.style.overflow = originalOverflow
+    }
+    
+  },[openMenu])
 
   
   return (
