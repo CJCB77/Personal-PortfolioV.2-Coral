@@ -84,7 +84,7 @@ function MobileMenu({openMenu,toggleMenu}: Props): JSX.Element {
         </div>
 
         {/* Contact Button */}
-        <HashLink to='/#contact' className='mobile-menu__btn  btn--light'>
+        <HashLink to='/#contact' className='mobile-menu__btn  btn--light' onClick={handleClick}>
           <LoopRight openMenu={openMenu} >
             <span>Contact me</span>
             <span>Contact me</span>
